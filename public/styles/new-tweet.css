@@ -50,3 +50,7 @@
 #div-container {
   position: relative;
 }
+
+.error-counter {
+  color: red;
+}
