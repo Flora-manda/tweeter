@@ -1,0 +1,16 @@
+#nav-logo {
+  font-family: 'Bungee', cursive;
+}
+
+.navbar-brand {
+    height: 120px;
+    width: 100vw;
+    z-index: 10;
+    background-color: #4056A1;
+    color: #FFFFFF;
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

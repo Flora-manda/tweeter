@@ -1,0 +1,18 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-color: rgb(255, 178, 75);
+  color: white;
+  background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png);
+}
+
+header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.font-light {
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+}
