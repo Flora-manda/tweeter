@@ -1,4 +1,4 @@
-header {
+.main-header {
   height: 400px;
   width: 100%;
   background-color: rgb(255, 178, 75);
@@ -6,7 +6,7 @@ header {
   background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png);
 }
 
-header div {
+.main-header div {
   display: flex;
   justify-content: center;
   align-items: center;
