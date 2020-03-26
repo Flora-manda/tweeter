@@ -1,6 +1,6 @@
 .tweeter-button {
-  background-color: #4056A1;
-  font-family: 'Bungee';
+  background-color: #4056a1;
+  font-family: "Bungee";
   color: white;
   position: absolute;
   left: 0%;
@@ -8,7 +8,7 @@
 }
 
 .counter {
-  font-family: 'Bungee';
+  font-family: "Bungee";
   font-weight: 700;
   position: absolute;
   right: 0%;
@@ -18,8 +18,8 @@
 #tweet-text {
   border: none;
   border-bottom: 3px solid #545149;
-  background-color: #F4F1EC;
-  width: 100%
+  background-color: #f4f1ec;
+  width: 100%;
 }
 
 .new-tweet {
@@ -31,10 +31,10 @@
 }
 
 #tweet-question {
-  width: 100%
+  width: 100%;
 }
 
-.container {
+#tweet-container {
   margin-top: 40px;
   width: 90%;
   display: flex;
@@ -51,7 +51,7 @@
   color: red;
 }
 
-article {
+.tweet {
   width: 100%;
   margin-top: 130px;
   border: 3px solid #545149;
@@ -60,27 +60,35 @@ article {
   padding: 1em;
 }
 
-article .tweet-header {
+.tweet-header {
   height: 40%;
   display: flex;
   justify-content: space-between;
 }
 
-article .past-tweet-comment {
+.past-tweet-comment {
   height: 30%;
   border-bottom: 2px solid #545149;
 }
 
-article .tweet-footer {
+.tweet-footer {
   height: 30%;
   font-size: small;
+  display: flex;
+  justify-content: space-between;
 }
 
-article #tweet-firstname {
+#tweet-firstname {
   font-weight: 300;
 }
 
-article #tweet-username {
+.tweet-img {
+  border-style: none;
+  position: relative;
+  top: 20%;
+}
+
+#tweet-username {
   color: #81a0e670;
   display: none;
 }
@@ -90,5 +98,33 @@ article:hover {
 }
 
 article:hover #tweet-username {
+  display: block;
+}
+
+.first-warning {
+  border: 2.5px solid red;
+  height: 50px;
+  margin-bottom: 30px;
+  padding: 1%;
+  text-align: center;
+  color: red;
+  display: none;
+}
+
+.second-warning {
+  border: 2.5px solid red;
+  height: 50px;
+  margin-bottom: 30px;
+  padding: 1%;
+  text-align: center;
+  color: red;
+  display: none;
+}
+
+.first-warning-show {
+  display: block;
+}
+
+.second-warning-show {
   display: block;
 }

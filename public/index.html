@@ -25,10 +25,16 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- App JS (date library) -->
+    <script type="text/javascript" src="/scripts/moment.min.js"></script>
+
+    <!-- App JS (footer icons) -->
+    <script type="text/javascript" src="/scripts/font_awesome.js"></script>
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
 
-    <!-- App JS -->
+    <!-- App JS (tweet-counter) -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
@@ -47,8 +53,10 @@
       </div>
   </header>
     <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
+    <main id="tweet-container">
+      <section class="new-tweet" id="tweet-form-container">
+        <div class="first-warning"><i class="fas fa-exclamation-triangle"></i> Your tweet character must be 140 or less! <i class="fas fa-exclamation-triangle"></i></div>
+        <div class="second-warning"><i class="fas fa-exclamation-triangle"></i>  Please enter a tweet! <i class="fas fa-exclamation-triangle"></i></div>
         <form class="tweet-form" method="POST" action="/tweets">
           <label id="tweet-question" for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -58,14 +66,6 @@
           </div>
         </form>
       </section>
-      <article>
-        <header class="tweet-header">
-          <span id="tweet-firstname">Rhonda</span>
-           <span id="tweet-username">@RhDaa1</span>
-        </header>
-        <p class="past-tweet-comment">If I have seen further it is by standing on the shoulders of giants</p>
-        <footer class="tweet-footer"> 10 days ago</footer>
-      </article>
     </main>
   </body>
 </html>
