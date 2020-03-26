@@ -69,7 +69,7 @@ $(document).ready(function() {
     //Calls createTweetElement for each tweet
     //Takes return value and appends it to the tweets container
     $.each(tweets, function(index, tweetData) {
-      $("#tweet-form-container").append(createTweetElement(tweetData));
+      $(".tweet-receiver").prepend(createTweetElement(tweetData));
     });
   };
 
@@ -115,9 +115,6 @@ $(document).ready(function() {
     if ($("#tweet-text").val().length > 140) {
       $(".first-warning").slideDown("slow", function() {
         $(".first-warning").addClass("first-warning-show");
-        $(".tweet-form").on("click", function(event) {
-          $(".first-warning").hide();
-        });
       });
     } else if (
       $("#tweet-text").val() === "" ||
@@ -125,9 +122,6 @@ $(document).ready(function() {
     ) {
       $(".second-warning").slideDown("slow", function() {
         $(".second-warning").addClass("second-warning-show");
-        $(".tweet-form").on("click", function(event) {
-          $(".second-warning").hide();
-        });
       });
     } else {
       const serializeData = $(this).serialize();
@@ -141,6 +135,8 @@ $(document).ready(function() {
           // Success in getting the response from the request
           requestOneTweet();
           $("#tweet-text").val("");
+          const remain = 140;
+          $(".counter").text(remain);
         })
         .fail(function(error) {
           // Problem with the request
@@ -149,4 +145,27 @@ $(document).ready(function() {
     }
   });
   requestPosts();
+
+  //Event handlers to hide warning display
+  $(".tweet-form").on("click", function() {
+    $(".first-warning").hide();
+  });
+
+  $(".tweet-form").on("click", function() {
+    $(".second-warning").hide();
+  });
+
+  //Event handler to diplay or hide form when arrow buttom is clicked
+  $(".arrow").on("click", function() {
+    let form_notdisplayed = $(".new-tweet").hasClass("new-tweet-show");
+    if (!form_notdisplayed) {
+      $(".new-tweet").slideDown("slow", function() {
+        $(".new-tweet").addClass("new-tweet-show");
+      });
+    } else {
+      $(".new-tweet")
+        .removeClass("new-tweet-show")
+        .slideUp();
+    }
+  });
 });

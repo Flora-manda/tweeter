@@ -24,6 +24,11 @@
 
 .new-tweet {
   width: 100%;
+  display: none;
+}
+
+.new-tweet-show {
+  display: block;
 }
 
 .tweet-form {
@@ -37,6 +42,15 @@
 #tweet-container {
   margin-top: 40px;
   width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tweet-receiver {
+  margin-top: 40x;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,4 +141,27 @@ article:hover #tweet-username {
 
 .second-warning-show {
   display: block;
+}
+
+.arrow {
+  position: relative;
+  top: 28px;
+  right: 50%;
+  color: red;
+  animation: slide 1s ease-in-out infinite;
+}
+
+@keyframes slide {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0px, 10px);
+  }
+}
+
+.arrow:hover {
+  color: white;
 }
