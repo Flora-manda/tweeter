@@ -24,8 +24,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+nav {
+  display: flex;
+  flex-direction: row;
+}

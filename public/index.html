@@ -4,6 +4,11 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+
     <!-- External CSS -->
     <link
       rel="stylesheet"
@@ -56,38 +61,42 @@
         ><i class="fas fa-angle-double-down arrow"></i
       ></span>
     </nav>
-    <header class="main-header">
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div>
-        <h2>Flora<span class="font-light"> Uwadiegwu</span></h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main id="tweet-container">
-      <section class="new-tweet" id="tweet-form-container">
-        <div class="first-warning">
-          <i class="fas fa-exclamation-triangle"></i> Your tweet character must
-          be 140 or less! <i class="fas fa-exclamation-triangle"></i>
+    <div class="main-container">
+      <header class="main-header">
+        <div>
+          <img class="header-image" src="/images/profile-hex.png" />
         </div>
-        <div class="second-warning">
-          <i class="fas fa-exclamation-triangle"></i> Please enter a tweet!
-          <i class="fas fa-exclamation-triangle"></i>
+        <br />
+        <div>
+          <h2>Flora<span class="font-light"> Uwadiegwu</span></h2>
         </div>
-        <form class="tweet-form" method="POST" action="/tweets">
-          <label id="tweet-question" for="tweet-text"
-            >What are you humming about?</label
-          >
-          <textarea name="text" id="tweet-text"></textarea>
-          <div id="div-container">
-            <button class="tweeter-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main id="tweet-container">
+        <section class="new-tweet" id="tweet-form-container">
+          <div class="first-warning">
+            <i class="fas fa-exclamation-triangle"></i> Your tweet character
+            must be 140 or less! <i class="fas fa-exclamation-triangle"></i>
           </div>
-        </form>
-      </section>
-      <div class="tweet-receiver"></div>
-    </main>
+          <div class="second-warning">
+            <i class="fas fa-exclamation-triangle"></i> Please enter a tweet!
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <form class="tweet-form" method="POST" action="/tweets">
+            <label id="tweet-question" for="tweet-text"
+              >What are you humming about?</label
+            >
+            <textarea name="text" id="tweet-text"></textarea>
+            <div id="div-container">
+              <button class="tweeter-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+        </section>
+        <div class="tweet-receiver"></div>
+      </main>
+    </div>
   </body>
 </html>

@@ -1,9 +1,11 @@
 .main-header {
   height: 400px;
-  width: 100%;
+  width: 50%;
   background-color: rgb(255, 178, 75);
   color: white;
   background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png);
+  margin-right: 2em;
+  margin-top: 2.7em;
 }
 
 .main-header div {
@@ -15,4 +17,20 @@
 .font-light {
   font-family: "Source Sans Pro";
   font-weight: 300;
+}
+
+h2 {
+  box-sizing: inherit;
+  margin-top: auto;
+}
+
+.header-image {
+  border-style: none;
+  margin-top: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .main-header {
+    width: 100%;
+  }
 }

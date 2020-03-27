@@ -17,8 +17,11 @@ $(document).ready(function() {
 
     const $span = $("<span>")
       .attr("id", "tweet-firstname")
-      .text(tweetObj.user.name)
       .appendTo($header);
+
+    $("<p>")
+      .text(tweetObj.user.name)
+      .appendTo($span);
 
     $("<img>")
       .addClass("tweet-img")

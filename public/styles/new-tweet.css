@@ -1,3 +1,10 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2em;
+}
+
 .tweeter-button {
   background-color: #4056a1;
   font-family: "Bungee";
@@ -29,6 +36,8 @@
 
 .new-tweet-show {
   display: block;
+  margin-bottom: 4em;
+  margin-top: 0.8em;
 }
 
 .tweet-form {
@@ -42,14 +51,9 @@
 #tweet-container {
   margin-top: 40px;
   width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .tweet-receiver {
-  margin-top: 40x;
   width: 100%;
   display: flex;
   align-items: center;
@@ -67,26 +71,25 @@
 
 .tweet {
   width: 100%;
-  margin-top: 130px;
+  margin: 1em 0;
   border: 3px solid #545149;
   background-color: #f4f1ec;
-  height: 250px;
   padding: 1em;
 }
 
 .tweet-header {
-  height: 40%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .past-tweet-comment {
-  height: 30%;
+  height: auto;
   border-bottom: 2px solid #545149;
+  word-wrap: break-word;
 }
 
 .tweet-footer {
-  height: 30%;
   font-size: small;
   display: flex;
   justify-content: space-between;
@@ -94,12 +97,15 @@
 
 #tweet-firstname {
   font-weight: 300;
+  display: flex;
+  flex-direction: row;
 }
 
 .tweet-img {
   border-style: none;
-  position: relative;
-  top: 20%;
+  margin-right: 0.5em;
+  height: 64px;
+  width: 64px;
 }
 
 #tweet-username {
@@ -164,4 +170,16 @@ article:hover #tweet-username {
 
 .arrow:hover {
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0em;
+  }
+  .main-header {
+    margin-top: 0em;
+    margin-right: 0em;
+  }
 }
