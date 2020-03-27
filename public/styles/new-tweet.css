@@ -3,6 +3,7 @@
   flex-direction: row;
   align-items: flex-start;
   padding: 2em;
+  width: 100%;
 }
 
 .tweeter-button {
